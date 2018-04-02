@@ -1,4 +1,4 @@
-FROM google/cloud-sdk:190.0.1
+FROM google/cloud-sdk:193.0.0
 
 ARG HELM_VERSION=2.8.1
 
@@ -7,3 +7,5 @@ RUN curl -sSL http://storage.googleapis.com/kubernetes-helm/helm-v${HELM_VERSION
  && mv linux-amd64/helm /usr/local/bin \
  && rm -rf linux-amd64 \
  && rm -f helm.tar.gz
+
+RUN gcloud components install docker-credential-gcr
