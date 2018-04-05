@@ -18,4 +18,4 @@ RUN curl -fsSL https://download.docker.com/linux/static/stable/x86_64/docker-${D
  && mv /tmp/docker/docker /usr/local/bin \
  && rm -r /tmp/docker-${DOCKER_VERSION}-ce.tgz /tmp/docker
 
-RUN gcloud components install kubectl docker-credential-gcr
+RUN gcloud components install kubectl docker-credential-gcr --quiet
