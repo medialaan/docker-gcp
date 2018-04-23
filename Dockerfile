@@ -19,3 +19,7 @@ RUN curl -fsSL https://download.docker.com/linux/static/stable/x86_64/docker-${D
  && rm -r /tmp/docker-${DOCKER_VERSION}-ce.tgz /tmp/docker
 
 RUN gcloud components install kubectl docker-credential-gcr --quiet
+
+# Needed for gsutil to figure out correct Content-Type
+# use_magicfile option: https://cloud.google.com/storage/docs/gsutil/addlhelp/WorkingWithObjectMetadata
+RUN apk --no-cache add file
