@@ -7,3 +7,6 @@ RUN curl -sSL http://storage.googleapis.com/kubernetes-helm/helm-v${HELM_VERSION
  && mv linux-amd64/helm /usr/local/bin \
  && rm -rf linux-amd64 \
  && rm -f helm.tar.gz
+
+RUN apt-get update && apt-get install -y jq \
+ && rm -rf /var/lib/apt/lists/*
