@@ -1,6 +1,6 @@
 FROM google/cloud-sdk:198.0.0
 
-ARG HELM_VERSION=2.8.2
+ARG HELM_VERSION=2.9.1
 
 RUN curl -sSL http://storage.googleapis.com/kubernetes-helm/helm-v${HELM_VERSION}-linux-amd64.tar.gz -o helm.tar.gz \
  && tar -xf helm.tar.gz \
